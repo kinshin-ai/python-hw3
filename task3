@@ -1,0 +1,18 @@
+#Вводим с клавиатуры строку. Необходимо вывести строку, где развернём подстроку между первой и последней буквой "о" 
+#из исходной строки. Если она только одна или её нет - то сообщить, что буква "о" - одна или не встречается
+
+
+sent = input('введите строку')
+sent = sent.lower()
+counter = 0
+for i in sent:
+    if i == 'о':
+        counter += 1
+if counter < 2:
+    print ('буква О одна или не встречается')
+else:
+    print (sent.find('о'), sent.rfind('о'), sent[sent.find('о')+1: sent.rfind('о')])
+    str = sent[sent.find('о')+1: sent.rfind('о')]
+    stringlength=len(str)
+    rev_str = str[len(str)::-1]
+    print (sent[0:sent.find('о')] + 'о' + rev_str + 'о')
