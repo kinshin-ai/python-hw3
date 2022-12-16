@@ -1,0 +1,21 @@
+#Вводим с клавиатуры строку. Необходимо сказать, является ли эта строка дробным числом
+
+num = input('введите число')
+counter = 0
+for i in num:
+    if i == ',' or i == '.':
+        counter += 1
+if ',' in num and counter == 1:
+    num_list = num.split(',')
+    if num_list[0].isdigit() and num_list[1].isdigit():
+        print(f'{num} - дробное число')
+    else:
+        print(f'{num} - не дробное число')
+elif '.' in num and counter == 1:
+    num_list = num.split('.')
+    if num_list[0].isdigit() and num_list[1].isdigit():
+        print(f'{num} - дробное число')
+    else:
+        print(f'{num} - не дробное число')
+else:
+    print(f'{num} - не дробное число')
