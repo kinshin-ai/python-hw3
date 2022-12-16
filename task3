@@ -15,4 +15,4 @@ else:
     str = sent[sent.find('о')+1: sent.rfind('о')]
     stringlength=len(str)
     rev_str = str[len(str)::-1]
-    print (sent[0:sent.find('о')] + 'о' + rev_str + 'о')
+    print (sent[0:sent.find('о')] + 'о' + rev_str + sent[sent.rfind('о'):])
